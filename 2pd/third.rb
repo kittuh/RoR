@@ -1,5 +1,6 @@
 #Aprasoma Number klase
 class Number
+  #Metodas kuris apvercia skaiciu
   def self.Polyndrome(firstNr)
   reversed =0
     #issaugomas pirmas int skaicius, kad veliau butu su kuo palyginti
@@ -22,6 +23,7 @@ end
 
 
 class PrintInfo
+  #metodas kuris tikrina ar skaicius yra polindromas
   def self.PutAnswer(reversed,temp)
     #tikrinama ar skaicius reversed yra polindromas palyginant su temp
   if reversed==temp

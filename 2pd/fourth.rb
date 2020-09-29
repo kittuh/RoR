@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #Klase kuri apskaiciuoja skaicisu faktoriala
 class Integer
   def fact
@@ -7,10 +8,8 @@ class Integer
   end
 end
 #Nuskaitomas skaicius is consolines eilutes
-require "readline"
-firstNr=0
-puts "Input number:"
-firstNr = gets
-
+require 'readline'
+puts 'Input number:'
+first_nr = gets
 #Parasomas atsakymas skaicium kreipiantis i klases Integer Fact metoda.
-puts firstNr.to_i.fact
+puts first_nr.to_i.fact

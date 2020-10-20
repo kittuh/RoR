@@ -3,7 +3,7 @@
 class ArrayOfMultiples
 #Aprasomas naujas self multiply metodas priimantis du skaicius
   def self.multiply(first_nr, second_nr)
-  atsakymo masyvas, kuris laiko skaiciu sandaugas
+  #atsakymo masyvas, kuris laiko skaiciu sandaugas
     answer = []
     sum = 0
     i = 0
@@ -16,8 +16,8 @@ class ArrayOfMultiples
       i += 1
     end
 	 #atspausdinamas sandaugu masyvas
-    puts 'Array of multiples:'
-    puts answer
+   # puts 'Array of multiples:'
+   return answer
   end
 end
 
@@ -30,4 +30,4 @@ second_nr = gets
 #Kreipinys i klases multiply metoda perduodant pirma ir antra skaiciu
 #Pirmas skaicius - Kiek kartu bus antras skaicius padaugintas
 #Antras skaicius - Skaicius, kuri daugins.
-ArrayOfMultiples.multiply(first_nr, second_nr)
+puts ArrayOfMultiples.multiply(first_nr, second_nr)

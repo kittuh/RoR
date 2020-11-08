@@ -1,0 +1,73 @@
+table {
+    display:  flex;
+    justify-content: center;
+    width: auto;
+  }
+  h2{
+    display: flex;
+      text-align: center;
+  }
+   td {
+    text-align: left;
+    padding: 8px;
+    color: black;
+    background-color: gainsboro;
+  }
+  .extra td{
+      color: inherit;
+  }
+  .compTable{
+    
+    color: red;
+  }
+  th {
+    background-color: black;
+    color: white;
+  }
+  .row {
+    margin-left: 25px;
+    display: flex;
+    flex: 80%;
+    margin:0 auto;
+    padding: 30px;
+    
+  }
+  .column {
+    display: flex;
+flex: content;
+    
+  }
+  .text{
+    display: flex;
+    margin-top: 25%;
+    width: 90%;
+    line-height: 30px;
+   justify-content: center;
+    font-size: 1rem;
+  }
+  .container{
+    flex-direction: row-reverse;
+    display: flex;
+    flex: 20%;
+  }
+  .container .logoimg{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-items: center;
+    padding-left: 10px;
+    flex: 20%;
+  }
+  @media screen and (max-width: 700px) {
+    .row, .container {   
+      flex-direction: column;
+    }
+    .logoSponsor{
+      padding-right: 25px;
+  }
+
+  }@media screen and (max-width: 1200px) {
+    .container {   
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,31 @@
+<head>
+            <%= stylesheet_link_tag 'advIndex',  :media => "all" %>
+</head>
+
+
+<div class="main">
+<div class="table-add">
+<div class="add-new">
+ <%= link_to "sukurti skelbima", new_advertisment_path%>
+</div>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    </thead>  
+<% @advertisment.each do |ad| %>
+
+<tr>
+<td><%= ad.name%></td>
+<td><%= ad.description%></td>
+<td>
+    <%= link_to "Edit", edit_advertisment_path(ad)%>
+</td>
+<td>
+    <%= link_to "Delete", ad, method: :delete, data: {confirm: "are you sure you want to del?"} %>
+</td>
+</tr>
+<% end %>
+</table>
+</div>
+</div>

@@ -1,0 +1,3 @@
+<h1><%= @advertisment.name %></h1>
+<h4>"<%= @advertisment.description %>"</h4>
+<%= link_to 'Remove', @advertisment, method: :delete, data: { confirm: 'Are you sure?' } %>

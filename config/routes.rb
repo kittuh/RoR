@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :advertisments
   get 'home' => 'index#home'
   get 'gallery' => 'index#gallery'
   get 'contacts' => 'index#contacts'

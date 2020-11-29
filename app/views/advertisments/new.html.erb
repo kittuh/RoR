@@ -1,0 +1,8 @@
+<h3>Create a advertisment</h3>
+<%= form_with model: @advertisment do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :description, placeholder: "Description" %>
+
+  <%= form.submit %>
+<% end %>
+

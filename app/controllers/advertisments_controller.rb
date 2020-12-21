@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AdvertismentsController < ApplicationController
   def index
     @advertisment = Advertisment.all
@@ -6,7 +8,7 @@ class AdvertismentsController < ApplicationController
   def new
     @advertisment = Advertisment.new
   end
-  
+
   def show
     @advertisment = Advertisment.find(params[:id])
   end
@@ -18,17 +20,17 @@ class AdvertismentsController < ApplicationController
 
   def edit
     @advertisment = Advertisment.find(params[:id])
-end
+  end
 
-def update
+  def update
     @advertisment = Advertisment.find(params[:id])
     if @advertisment.update(advertisment_params)
-        redirect_to advertisments_path
+      redirect_to advertisments_path
     else
-        render :endit
-    end 
-end
-  
+      render :endit
+    end
+  end
+
   def destroy
     @advertisment = Advertisment.find(params[:id])
     @advertisment.destroy

@@ -2,30 +2,35 @@
             <%= stylesheet_link_tag 'advIndex',  :media => "all" %>
 </head>
 
-
+<button><%= link_to "sukurti posta", new_advertisment_path%></button>
 <div class="main">
-<div class="table-add">
-<div class="add-new">
- <%= link_to "sukurti skelbima", new_advertisment_path%>
-</div>
-<table>
-    <thead>
-    <th>Name</th>
-    <th>Description</th>
-    </thead>  
+ 
 <% @advertisment.each do |ad| %>
 
-<tr>
-<td><%= ad.name%></td>
-<td><%= ad.description%></td>
-<td>
-    <%= link_to "Edit", edit_advertisment_path(ad)%>
-</td>
-<td>
-    <%= link_to "Delete", ad, method: :delete, data: {confirm: "are you sure you want to del?"} %>
-</td>
-</tr>
+<div class="center">
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div class="property-image-title">
+        </div>
+      </div></a>
+    <div class="property-description">
+      <h5> <%= ad.name%> </h5>
+      <p><%= ad.description%></td></p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+      <button><%= link_to "Delete", ad, method: :delete, data: {confirm: "are you sure you want to del?"} %></button>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
 <% end %>
-</table>
+
 </div>
 </div>
+

@@ -1,8 +1,37 @@
-<h3>Create a advertisment</h3>
+<style>
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+  .back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+<div class="back">
+<div> 
+<h3>Create blog post</h3>
 <%= form_with model: @advertisment do |form| %>
-  <%= form.text_field :name, placeholder: "name" %>
+<div>
+<div class="form-outline">
+   <%= form.text_field :name, placeholder: "name" %>
+  <label class="form-label" for="formControlLg">Title</label>
+</div>
+ <div class="form-outline">
   <%= form.text_field :description, placeholder: "Description" %>
+  <label class="form-label" for="formControlLg">Description</label>
+</div>
+  </div>
+  <button> <%= form.submit %> </button>
+</div>
+</div>
 
-  <%= form.submit %>
 <% end %>
+
 
